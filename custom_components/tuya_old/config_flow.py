@@ -267,7 +267,7 @@ class OptionsFlowHandler(config_entries.OptionsFlow):
                     default=self.config_entry.options.get(
                         CONF_DISCOVERY_INTERVAL, DEFAULT_DISCOVERY_INTERVAL
                     ),
-                ): vol.All(vol.Coerce(int), vol.Clamp(min=30, max=900)),
+                ): vol.All(vol.Coerce(int), vol.Clamp(min=30, max=1800)),
             }
         )
 
@@ -287,7 +287,7 @@ class OptionsFlowHandler(config_entries.OptionsFlow):
                         default=self.config_entry.options.get(
                             CONF_QUERY_INTERVAL, DEFAULT_QUERY_INTERVAL
                         ),
-                    ): vol.All(vol.Coerce(int), vol.Clamp(min=30, max=240)),
+                    ): vol.All(vol.Coerce(int), vol.Clamp(min=30, max=360)),
                     vol.Optional(CONF_QUERY_DEVICE, default=def_val): vol.In(devices),
                 }
             )
