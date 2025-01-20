@@ -160,8 +160,8 @@ class TuyaClimateEntity(TuyaDevice, ClimateEntity):
         """Return the unit of measurement used by the platform."""
         unit = self._tuya.temperature_unit()
         if unit == "FAHRENHEIT":
-            return TEMP_FAHRENHEIT
-        return TEMP_CELSIUS
+            return UnitOfTemperature.FAHRENHEIT
+        return UnitOfTemperature.CELSIUS
 
     @property
     def hvac_mode(self):
