@@ -22,8 +22,8 @@ from homeassistant.const import (
     ATTR_TEMPERATURE,
     CONF_PLATFORM,
     CONF_UNIT_OF_MEASUREMENT,
-    TEMP_CELSIUS,
-    TEMP_FAHRENHEIT,
+    UnitOfTemperature.CELSIUS,
+    UnitOfTemperature.FAHRENHEIT,
 )
 from homeassistant.core import callback
 from homeassistant.helpers.dispatcher import async_dispatcher_connect
